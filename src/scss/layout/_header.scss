@@ -53,23 +53,29 @@
 }
 
 .language-item__language-link {
-  color: #9f6a6a;
+  color: #fff;
 }
 
 .language-item__language-link:active {
   text-decoration: none;
-  color: #e5abab;
+  color: #ff0a78;
 }
 
 .language-item__language-link:hover {
   text-decoration: none;
-  color: #e5abab;
+  color: #ff0a78;
 }
 
 .shoping-cart {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 50px;
+  height: 50px;
+
+  img {
+    width: 20px;
+  }
 }
 
 .shopping-cart__link {
@@ -86,6 +92,11 @@
   padding-left: 10px;
   color: #fff;
 }
+
+// .shoping-cart__img {
+//   width: 50px;
+//   height: 50px;
+// }
 
 .header-bottom {
   background-color: #142027;
@@ -168,7 +179,7 @@
 .hamburger-list:active {
   // content: "3";
 
-  color: #142027;
+  color: #ff0a78;
 }
 
 .hamburger-list {

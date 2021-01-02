@@ -9,11 +9,11 @@ const Header = () => (
       <div className="contacts">
         <div className="contact">
           {/* <img src="/imgs/small_phone_icon.png" alt="small_phone_icon" /> */}
-          <span className="contact__text">тел:234-45-23</span>
+          <span className="contact__text">тел:777-77-77</span>
         </div>
         <div className="contact">
           {/* <img src="/imgs/email_icon.png" alt="email_icon" /> */}
-          <span className="contact__text">email:knyha@gmail.com</span>
+          <span className="contact__text">email:my-test@gmail.com</span>
         </div>
       </div>
 
@@ -36,12 +36,12 @@ const Header = () => (
           </div>
         </div>
         <div className="shoping-cart">
-          <Link className="shoping-cart__link" to="/cart">
+          <Link className="shoping-cart__link" to="/">
             <div className="shoping-cart__img">
-              {/* <img src="/imgs/shopping-cart-24.png" alt="shopping-cart-img" /> */}
+              <img src="/img/moon.png" alt="dark theme" />
             </div>
           </Link>
-          <Link className="shoping-cart__link" to="/cart">
+          <Link className="shoping-cart__link" to="/">
             <div className="shoping-cart__counter">{/* <Counter /> */}</div>
           </Link>
         </div>
@@ -70,23 +70,23 @@ const Header = () => (
                 </Link>
               </li>
               <li className="hamburger-list__item">
-                <Link className="hamburger-list__link" to="/bookstore">
-                  книгарня
+                <Link className="hamburger-list__link" to="/my_components">
+                  my test components
                 </Link>
               </li>
               <li className="hamburger-list__item">
-                <Link className="hamburger-list__link" to="/">
-                  про нас
+                <Link className="hamburger-list__link" to="/my_office">
+                  my office
                 </Link>
               </li>
               <li className="hamburger-list__item">
-                <Link className="hamburger-list__link" to="/">
-                  контакти
+                <Link className="hamburger-list__link" to="/shop">
+                  shop
                 </Link>
               </li>
               <li className="hamburger-list__item">
-                <Link className="hamburger-list__link" to="/cart">
-                  корзина
+                <Link className="hamburger-list__link" to="/i_am">
+                  i am
                 </Link>
               </li>
             </ul>
