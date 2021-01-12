@@ -8,22 +8,22 @@ export default () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/my_components">My my_components</Link>
+        <Link to="/my_components/component_1">component 1</Link>
       </li>
       <li>
-        <Link to="/tutorial/part-zero">Part #0</Link>
+        <Link to="/my_components/component_2">component 2</Link>
       </li>
       <li>
-        <Link to="/tutorial/part-one">Part #1</Link>
+        <Link to="/">Part #1</Link>
       </li>
       <li>
-        <Link to="/tutorial/part-two">Part #2</Link>
+        <Link to="/">Part #2</Link>
       </li>
       <li>
-        <Link to="/tutorial/part-three">Part #3</Link>
+        <Link to="/">Part #3</Link>
       </li>
       <li>
-        <Link to="/tutorial/part-four">Part #4</Link>
+        <Link to="/">Part #4</Link>
       </li>
     </ul>
   </div>
