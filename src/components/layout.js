@@ -9,7 +9,7 @@ export default ({ children }) => (
   <>
     <Header />
     <div
-      className={"children "}
+      className={"children"}
       //   style={{ margin: `0 auto`, maxWidth: 650, backgroundColor: `#eeeeee` }}
     >
       {/* <Sidebar /> */}
