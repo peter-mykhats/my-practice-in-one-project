@@ -10,10 +10,10 @@ const Sidebar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/my_components/component_1">component 1</Link>
+          <Link to="/">component 1</Link>
         </li>
         <li>
-          <Link to="/my_components/component_2">component 2</Link>
+          <Link to="/">component 2</Link>
         </li>
         <li>
           <Link to="/">Part #1</Link>
