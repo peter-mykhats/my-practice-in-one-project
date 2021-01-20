@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default function Sidebar() {
+const Sidebar = () => {
   return (
     <div>
       <ul>
@@ -31,3 +31,4 @@ export default function Sidebar() {
     </div>
   )
 }
+export default Sidebar
