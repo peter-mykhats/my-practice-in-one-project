@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const Sidebar = () => {
   return (
-    <div>
+    <div className={"sidebar"}>
       <ul>
         <li>
           {/* sidebar */}
