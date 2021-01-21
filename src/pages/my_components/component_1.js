@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../../components/layout"
-import Sidebar from "../../components/Sidebar"
+// import Sidebar from "../../components/Sidebar"
 import "../../scss/main.scss"
 
 const Component_1 = () => {
@@ -9,7 +9,7 @@ const Component_1 = () => {
     <Layout>
       <div className="my-component container">
         <h1>My component_1</h1>
-        <Sidebar />
+        {/* <Sidebar /> */}
       </div>
     </Layout>
   )
