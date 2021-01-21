@@ -1,9 +1,7 @@
-.children {
-  position: relative;
-  //   z-index: 1;
-  top: 90px;
+.myshop {
   min-height: 100vh;
   // justify-content: space-between;
   display: flex;
   flex-direction: column;
+  padding-bottom: 100px; // потрібно на кожній сторінці
 }
