@@ -13,7 +13,7 @@ export default ({ children }) => (
       //   style={{ margin: `0 auto`, maxWidth: 650, backgroundColor: `#eeeeee` }}
     >
       {/* <Sidebar /> */}
-      {/* <div ></div> */}
+      <div></div>
       {children}
     </div>
     <Footer />
