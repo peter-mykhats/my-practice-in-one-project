@@ -9,11 +9,11 @@ const MyShop = ({ data }) => {
     <Layout>
       <div className={"myshop container"}>
         <h1>Shop page</h1>
-        <h1>
-          {product.map(book => {
-            return <Item key={book.node.id} bookitem={book.node} />
+        <div>
+          {product.map(comp => {
+            return <Item key={comp.node.id} compitem={comp.node} />
           })}
-        </h1>
+        </div>
         <pre>{JSON.stringify(data, null, 4)}</pre>
       </div>
     </Layout>

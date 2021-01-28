@@ -1,11 +1,11 @@
 import React from "react"
 
-const Item = ({ bookitem }) => {
+const Item = ({ compitem }) => {
   return (
-    <div>
-      <span>{bookitem.title + "   "}</span>
-      <span>{bookitem.parameters + "   "}</span>
-      <span>{bookitem.price}</span>
+    <div className={"comp-cardr"}>
+      <span>{compitem.title + "   "}</span>
+      <span>{compitem.parameters + "   "}</span>
+      <span>{compitem.price}</span>
     </div>
   )
 }
