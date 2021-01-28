@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Mac Book Air 2018",
+        "price": "760 $",
+        "slug": "mac-air-2018",
+        "parameters": "7",
+        "image": "/static/img/mac-air-2018.jpg"
+    },
+    {
+        "title": "Mac Book Pro 2019",
+        "price": "960 $",
+        "slug": "mac-pro-2019",
+        "parameters": "8",
+        "image": "/static/img/mac-pro-2019.jpg"
+    },
+    {
+        "title": "Mac Book Pro 2020",
+        "price": "1500 $",
+        "slug": "mac-pro-2020",
+        "parameters": "10",
+        "image": "/static/img/mac-pro-2020.jpg"
+    }
+]
