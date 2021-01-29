@@ -1,8 +1,12 @@
 .comp-card {
-  width: 200px;
-  height: 400 px;
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
+  box-sizing: border-box;
+  width: 150px;
+  height: 200px;
+  border-style: solid, rgb(0, 0, 0);
+  //   border-color: rgb(0, 0, 0);
   background-color: beige;
   padding: 20px;
+  margin: 15px;
+  justify-content: center;
+  //   position: relative;
 }
