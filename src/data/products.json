@@ -19,5 +19,12 @@
         "slug": "mac-pro-2020",
         "parameters": "10",
         "image": "/static/img/mac-pro-2020.jpg"
+    },
+    {
+        "title": "Acer Aspire One V3",
+        "price": "725 $",
+        "slug": "mac-pro-2020",
+        "parameters": "10",
+        "image": "/static/img/mac-pro-2020.jpg"
     }
 ]

@@ -1,7 +1,7 @@
 import React from "react"
 
 import Header from "./header"
-import Sidebar from "./Sidebar"
+import Sidebar from "./sidebar"
 import "../scss/main.scss"
 import Footer from "./Footer"
 

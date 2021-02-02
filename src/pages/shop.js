@@ -9,7 +9,7 @@ const MyShop = ({ data }) => {
     <Layout>
       <div className={"myshop container"}>
         <h1>Shop page</h1>
-        <div>
+        <div className={"myshop-items container"}>
           {product.map(comp => {
             return <Item key={comp.node.id} compitem={comp.node} />
           })}

@@ -5,3 +5,9 @@
   flex-direction: column;
   padding-bottom: 100px; // потрібно на кожній сторінці
 }
+
+.myshop-items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
