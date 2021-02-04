@@ -9,12 +9,12 @@ const MyShop = ({ data }) => {
     <Layout>
       <div className={"myshop container"}>
         <h1>Shop page</h1>
-        <div className={"myshop-items container"}>
+        <div className={"myshop-items"}>
           {product.map(comp => {
             return <Item key={comp.node.id} compitem={comp.node} />
           })}
         </div>
-        <pre>{JSON.stringify(data, null, 4)}</pre>
+        {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
       </div>
     </Layout>
   )
@@ -57,6 +57,7 @@ export const query = graphql`
           parameters
           slug
           id
+          image
         }
       }
     }

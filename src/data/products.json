@@ -4,27 +4,34 @@
         "price": "760 $",
         "slug": "mac-air-2018",
         "parameters": "7",
-        "image": "/static/img/mac-air-2018.jpg"
+        "image": "/img/mac-air-2018.jpg"
     },
     {
-        "title": "Mac Book Pro 2019",
+        "title": "Mac Book Pro 2019 hghhg fdf jhh",
         "price": "960 $",
         "slug": "mac-pro-2019",
         "parameters": "8",
-        "image": "/static/img/mac-pro-2019.jpg"
+        "image": "/img/mac-pro-2019.jpg"
     },
     {
         "title": "Mac Book Pro 2020",
         "price": "1500 $",
         "slug": "mac-pro-2020",
         "parameters": "10",
-        "image": "/static/img/mac-pro-2020.jpg"
+        "image": "/img/mac-pro-2020.jpg"
     },
     {
         "title": "Acer Aspire One V3",
         "price": "725 $",
         "slug": "mac-pro-2020",
-        "parameters": "10",
-        "image": "/static/img/mac-pro-2020.jpg"
+        "parameters": "4",
+        "image": "/img/mac-pro-2020.jpg"
+    },
+    {
+        "title": "Lenovo IdeaPad M3",
+        "price": "445 $",
+        "slug": "mlenovo-idea-pad-m3",
+        "parameters": "1",
+        "image": "/img/mac-pro-2020.jpg"
     }
 ]
