@@ -1,0 +1,27 @@
+.acesories {
+  img {
+    width: 200px;
+  }
+  line-height: 200%;
+  padding-bottom: 100px;
+}
+.acesories-image-box {
+  background-color: #fff;
+}
+.acesories-buy {
+  color: rgb(255, 255, 255);
+  display: flex;
+  background-color: rgb(7, 7, 7);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 3px;
+  width: 100px;
+  margin: 30px;
+}
+.acesories-buy:hover {
+  background-color: rgb(88, 86, 86);
+  font-size: 17px;
+  text-shadow: 1px 1px 2px black;
+}

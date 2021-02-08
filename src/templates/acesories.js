@@ -1,25 +1,31 @@
 import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
 
 const Template = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   console.log(JSON.stringify(data, null, 4))
 
   return (
-    <div>
-      <Link to="/shop/">Go Back</Link>
-      <hr />
-      <h1>{post.title}</h1>
-      <h4>{post.parameters}</h4>
-      <h4>{post.price}</h4>
-      <h4>{post.image}</h4>
-      <h4>{post.path}</h4>
-      <div className={"comp-card__img"}>
-        {<img src={post.image} alt="image" />}
+    <Layout>
+      <div className={"acesories"}>
+        <Link to="/shop/">Go Back</Link>
+        <hr />
+        <h1>{post.title}</h1>
+        <h4>{"Параметри " + post.parameters + " з 10"}</h4>
+        <h4>{"Ціна: " + post.price + " $"}</h4>
+        {/* <h4>{post.image}</h4> */}
+        {/* <h4>{post.path}</h4> */}
+        <div className={"acesories-image-box"}>
+          {<img src={post.image} alt="imagere" />}
+        </div>
+        <div className={"acesories-buy"}>купити</div>
+        <hr />
+        <Link to="/shop/">Go Back</Link>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+    </Layout>
   )
 }
 

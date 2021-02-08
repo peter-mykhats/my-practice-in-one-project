@@ -22,10 +22,12 @@ const Item = ({ productItem }) => {
           <div className={"comp-card__price"}>
             {productItem.frontmatter.price + " $"}
           </div>
-          <div className={"comp-card__shopcart"}>
-            {/* <img src="img/pngegg.png" alt="shopcart" /> */}
-            {productItem.frontmatter.price}
-          </div>
+          <Link to="/">
+            <div className={"comp-card__shopcart"}>
+              {/* <img src="img/pngegg.png" alt="shopcart" /> */}
+              купити
+            </div>
+          </Link>
         </div>
       </div>
     </Link>
