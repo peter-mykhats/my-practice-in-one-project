@@ -1,27 +1,79 @@
 // exports.onCreateNode = ({ node }) => {
 //   console.log(`Node created of type "${node.internal.type}"`)
 // }
+// const path = require("path")
 
-exports.createPages = async ({ actions: { createPage }, graphql }) => {
-  const results = await graphql(`
+// exports.createPages = async ({ actions: { createPage }, graphql }) => {
+//   const results = await graphql(`
+//     {
+//       allMarkdownRemark {
+//         edges {
+//           node {
+//             html
+//             id
+//             frontmatter {
+//               path
+//               title
+//               price
+//               image
+//               parameters
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+//   results.data.allMarkdownRemark.edges.forEach(edge => {
+//     const product = edge.node
+//     createPage({
+//       path: `/my_office/${product.id}/`,
+//       component: require.resolve("./src/templates/acesories.js"),
+//       context: {
+//         path: product.path,
+//       },
+//     })
+//   })
+// }
+
+// ====
+
+const path = require("path")
+
+exports.createPages = ({ boundActionCreators, graphql }) => {
+  const { createPage } = boundActionCreators
+
+  const postTemplate = path.resolve("src/templates/acesories.js")
+
+  return graphql(`
     {
-      allProductsJson {
+      allMarkdownRemark {
         edges {
           node {
-            slug
+            html
+            id
+            frontmatter {
+              path
+              title
+              price
+              image
+              parameters
+            }
           }
         }
       }
     }
-  `)
-  results.data.allProductsJson.edges.forEach(edge => {
-    const product = edge.node
-    createPage({
-      path: `/gql/${product.slug}/`,
-      component: require.resolve("./src/templates/product-graphql.js"),
-      context: {
-        slug: product.slug,
-      },
+  `).then(res => {
+    if (res.errors) {
+      return Promise.reject(res.errors)
+    }
+
+    res.data.allMarkdownRemark.edges.forEach(edges => {
+      const id = edges.node.id
+      createPage({
+        path: `/my_office/${edges.node.id}/`,
+        component: postTemplate,
+        context: { id },
+      })
     })
   })
 }

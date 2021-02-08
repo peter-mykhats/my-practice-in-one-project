@@ -7,6 +7,7 @@ module.exports = {
     "gatsby-transformer-json",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-catch-links",
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,5 +24,6 @@ module.exports = {
         path: `${__dirname}/static/img/`,
       },
     },
+    "gatsby-transformer-remark",
   ],
 }

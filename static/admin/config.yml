@@ -117,7 +117,7 @@ collections:
           - { label: Template Key, name: templateKey, widget: hidden }
           - { label: Type, name: type, widget: hidden, default: 1 }
           - { label: Language, name: language, widget: hidden, default: de }
-          - { label: Title, name: title, widget: string }
+          - { label: Title, name: titles, widget: string }
           - { label: SEO Description, name: description, widget: text }
 
       #Journal DE
