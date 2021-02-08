@@ -1,7 +1,8 @@
 ---
-title: "Lenovo"
-price: "260 $"
-path: "lenovo"
-parameters: "2"
-image: "/img/mac-pro-2019.jpg"
+title: "Ноутбук Acer Nitro 5"
+price: "940"
+path: "acer-nitro-5"
+parameters: "6"
+image: "/img/acer-nitro-5.jpg"
+category: "computer"
 ---

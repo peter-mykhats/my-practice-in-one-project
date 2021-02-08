@@ -1,7 +1,7 @@
 ---
-title: "Mac Book Air 2018"
-price: "760 $"
-path: "mac-air-2018"
-parameters: "7"
-image: "/img/mac-air-2018.jpg"
+title: "Ноутбук APPLE MacBook Pro 16 1 TB 2019 Silver"
+price: "3450"
+path: "mac-pro-2019"
+parameters: "9"
+image: "/img/mac-pro-2019-2.jpg"
 ---

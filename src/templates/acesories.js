@@ -5,13 +5,11 @@ import { graphql } from "gatsby"
 const Template = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   console.log(JSON.stringify(data, null, 4))
-  // console.log(post)
 
   return (
     <div>
-      <Link to="/my_office">Go Back</Link>
+      <Link to="/shop/">Go Back</Link>
       <hr />
-      {/* {JSON.stringify(data, null, 4)} */}
       <h1>{post.title}</h1>
       <h4>{post.parameters}</h4>
       <h4>{post.price}</h4>

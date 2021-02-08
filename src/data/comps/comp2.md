@@ -1,7 +1,8 @@
 ---
-title: "Mac Book Pro 2019"
-price: "960 $"
-path: "mac-air-2019"
-parameters: "9"
-image: "/img/mac-pro-2019.jpg"
+title: "Ноутбук LENOVO IdeaPad S1459"
+price: "360"
+path: "lenovo-ideapad-s1459"
+parameters: "1"
+image: "/img/lenovo-ideapad-s1459.jpg"
+category: "computer"
 ---

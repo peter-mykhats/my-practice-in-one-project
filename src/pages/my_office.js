@@ -1,46 +1,38 @@
-import { Link } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
+import { graphql } from "gatsby"
+import Item from "../components/Item"
 
 const MyOffice = ({ data }) => {
-  const contecstData = data.allMarkdownRemark.edges
+  const products = data.allProductsJson.edges
   return (
     <Layout>
-      <h1>My office page</h1>
-
-      {contecstData.map(accesor => (
-        <div key={accesor.node.id}>
-          <h2>{accesor.node.frontmatter.title}</h2>
-          <h3>{accesor.node.frontmatter.parameters}</h3>
-          <h3>{accesor.node.frontmatter.path}</h3>
-          <h3>{accesor.node.frontmatter.price}</h3>
-
-          <span>-----</span>
-          <Link to={accesor.node.id}>Read More</Link>
-          <hr />
+      <div className={"myshop container"}>
+        <h1>Shop page</h1>
+        <div className={"myshop-items"}>
+          {products.map(comp => {
+            return <Item key={comp.node.id} compitem={comp.node} />
+          })}
         </div>
-      ))}
+      </div>
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allProductsJson {
       edges {
         node {
+          title
+          price
+          parameters
+          slug
           id
-          frontmatter {
-            image
-            parameters
-            path
-            price
-            title
-          }
+          image
         }
       }
     }
   }
 `
-
 export default MyOffice
