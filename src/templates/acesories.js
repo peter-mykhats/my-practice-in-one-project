@@ -17,6 +17,9 @@ const Template = ({ data }) => {
       <h4>{post.price}</h4>
       <h4>{post.image}</h4>
       <h4>{post.path}</h4>
+      <div className={"comp-card__img"}>
+        {<img src={post.image} alt="image" />}
+      </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   )
@@ -34,6 +37,7 @@ export const postQuery = graphql`
         title
         parameters
         price
+        image
       }
     }
   }

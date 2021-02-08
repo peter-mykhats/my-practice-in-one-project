@@ -14,6 +14,7 @@ const MyOffice = ({ data }) => {
           <h3>{accesor.node.frontmatter.parameters}</h3>
           <h3>{accesor.node.frontmatter.path}</h3>
           <h3>{accesor.node.frontmatter.price}</h3>
+
           <span>-----</span>
           <Link to={accesor.node.id}>Read More</Link>
           <hr />
