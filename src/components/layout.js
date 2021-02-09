@@ -9,7 +9,7 @@ export default ({ children }) => (
   <>
     <Header />
     <div className={"layout"}>
-      <div className={"col-2 "}>
+      <div className={"sidebar-block"}>
         <Sidebar />
       </div>
       <div>{children}</div>

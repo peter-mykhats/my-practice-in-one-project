@@ -6,7 +6,7 @@ const Item = ({ productItem }) => {
   const nosale = (price / 100) * 120
   const sale = price - nosale
   return (
-    <Link to={`/shop/${productItem.id}`} className="books-card">
+    <Link to={`/shop/${productItem.id}`}>
       <div className={"comp-card"}>
         <div className={"comp-card__img"}>
           {<img src={productItem.frontmatter.image} alt="imagee" />}

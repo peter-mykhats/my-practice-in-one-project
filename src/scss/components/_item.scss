@@ -3,8 +3,12 @@
   height: 200px;
   // background-color: rgb(163, 163, 91);
   margin: 12px;
-  padding-bottom: 90px;
+  // padding-bottom: 90px;
   justify-content: space-around;
+  padding: 15px 15px 110px 15px;
+}
+.comp-card:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .comp-card__title {
   // background-color: rgb(167, 160, 160);

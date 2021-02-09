@@ -9,7 +9,7 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <div className={"acesories"}>
+      <div className={"acesories container"}>
         <Link to="/shop/">Go Back</Link>
         <hr />
         <h1>{post.title}</h1>
