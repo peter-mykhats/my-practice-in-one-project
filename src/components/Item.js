@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Star from "./Star"
 
 const Item = ({ productItem }) => {
   const price = productItem.frontmatter.price
@@ -22,6 +23,8 @@ const Item = ({ productItem }) => {
           <div className={"comp-card__price"}>
             {productItem.frontmatter.price + " $"}
           </div>
+          {/* <div>{productItem.frontmatter.parameters}</div> */}
+          <Star />
           <Link to="/">
             <div className={"comp-card__shopcart"}>
               {/* <img src="img/pngegg.png" alt="shopcart" /> */}

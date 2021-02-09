@@ -6,4 +6,11 @@
 }
 .sidebar-block {
   width: 200px;
+  @media (max-width: 500px) {
+    width: 100px;
+  }
+  @media (max-width: 374px) {
+    width: 0px;
+    visibility: hidden;
+  }
 }
