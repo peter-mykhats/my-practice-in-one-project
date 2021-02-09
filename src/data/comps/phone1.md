@@ -1,5 +1,5 @@
 ---
-title: "Телефон Aplle Iphone 8 Plus"
+title: "Телефон Apple Iphone 8 Plus"
 price: "400"
 path: "iphone-8plus"
 parameters: "6"

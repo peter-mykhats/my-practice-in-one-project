@@ -32,10 +32,8 @@ const Template = ({ data }) => {
 export default Template
 
 export const postQuery = graphql`
-  query BlogPostById($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
+  query BlogPostById($alldata: String!) {
+    markdownRemark(frontmatter: { path: { eq: $alldata } }) {
       frontmatter {
         path
         title

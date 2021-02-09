@@ -29,11 +29,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     res.data.allMarkdownRemark.edges.forEach(edges => {
-      const id = edges.node.id
+      const alldata = edges.node.frontmatter.path
       createPage({
-        path: `/shop/${edges.node.id}/`,
+        path: `/shop/${edges.node.frontmatter.path}/`,
         component: postTemplate,
-        context: { id },
+        context: { alldata },
       })
     })
   })
