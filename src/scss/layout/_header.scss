@@ -15,8 +15,8 @@
 
 .contacts {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -197,7 +197,7 @@
 .hamburger-box .menu__icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
+  // float: right;
   padding: 42px 20px;
   position: relative;
   user-select: none;

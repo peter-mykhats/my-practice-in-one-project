@@ -1,15 +1,11 @@
 @charset "UTF-8";
 
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
-
-@import "vendors/normalize";
-
-@import "base/base", "base/fonts", "base/typography", "base/helpers";
+@import "base/base";
 @import "base/grid";
-@import "layout/header", "layout/footer", "layout/children";
-
-@import "components/button";
-
-@import "pages/home";
-
-@import "themes/default";
+@import "base/reset";
+@import "layout/myshop";
+@import "layout/header", "layout/footer", "layout/layout", "layout/my-component";
+@import "layout/acesories";
+@import "components/sidebar";
+@import "components/star";
+@import "components/item";

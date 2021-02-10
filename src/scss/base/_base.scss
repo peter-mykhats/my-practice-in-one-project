@@ -1,28 +1,11 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 body {
   font-family: "droid_sansregular", Arial, sans-serif;
   -webkit-font-smoothing: antialiased !important;
 }
 
 a {
-  color: $brand-color;
   text-decoration: none;
-
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
 }
-
 img {
   vertical-align: middle;
 }

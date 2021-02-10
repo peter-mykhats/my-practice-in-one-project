@@ -1,0 +1,16 @@
+.sidebar {
+  min-height: 86vh;
+  background-color: rgb(233, 233, 233);
+  font-size: 100%;
+  line-height: 130%;
+}
+.sidebar-block {
+  width: 200px;
+  @media (max-width: 500px) {
+    width: 100px;
+  }
+  @media (max-width: 374px) {
+    width: 0px;
+    visibility: hidden;
+  }
+}
