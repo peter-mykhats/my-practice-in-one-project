@@ -2,6 +2,7 @@ import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import "../scss/main.scss"
 
 const Template = ({ data }) => {
   const post = data.markdownRemark.frontmatter

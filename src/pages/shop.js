@@ -24,6 +24,7 @@ const MyShop = ({ data }) => {
     </Layout>
   )
 }
+export default MyShop
 
 export const query = graphql`
   {
@@ -43,5 +44,3 @@ export const query = graphql`
     }
   }
 `
-
-export default MyShop
