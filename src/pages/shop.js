@@ -2,7 +2,7 @@ import React from "react"
 import Item from "../components/Item"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import Sidebar from "../components/Sidebar"
+// import Sidebar from "../components/Sidebar"
 
 const MyShop = ({ data }) => {
   const allProducts = data.allMarkdownRemark.edges
@@ -10,7 +10,7 @@ const MyShop = ({ data }) => {
     <Layout>
       <div className={"myshop-block"}>
         <div className={"sidebar-block"}>
-          <Sidebar />
+          {/* <Sidebar /> */}
         </div>
         <div className={"myshop container"}>
           <h1>Shop page</h1>
