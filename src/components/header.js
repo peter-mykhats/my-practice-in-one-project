@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 // import Counter from "./Counter";
 import "../scss/main.scss"
+import Search from "./Search"
 
 const Header = () => (
   <header className={"header"}>
@@ -36,11 +37,12 @@ const Header = () => (
           </div>
         </div>
         <div className="shoping-cart">
-          <Link className="shoping-cart__link" to="/">
-            <div className="shoping-cart__img">
-              <img src="/img/moon.png" alt="dark theme" />
-            </div>
-          </Link>
+          {/* <Link className="shoping-cart__link" to="/"> */}
+          <div className="shoping-cart__img">
+            <Search />
+            {/* <img src="/img/moon.png" alt="dark theme" /> */}
+          </div>
+          {/* </Link> */}
           <Link className="shoping-cart__link" to="/">
             <div className="shoping-cart__counter">{/* <Counter /> */}</div>
           </Link>
