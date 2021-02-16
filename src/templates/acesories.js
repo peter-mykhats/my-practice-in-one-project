@@ -2,17 +2,22 @@ import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+// import { useSelector } from "react-redux"
 import "../scss/main.scss"
 
 const Template = ({ data }) => {
   const post = data.markdownRemark.frontmatter
   console.log(JSON.stringify(data, null, 4))
 
+  // const money = useSelector(state => state.category)
+  // console.log(money)
+
   return (
     <Layout>
       <div className={"acesories container"}>
         <Link to="/shop/">Go Back</Link>
         <hr />
+        {/* {money} */}
         <h1>{post.title}</h1>
         <h4>{"Параметри " + post.parameters + " з 10"}</h4>
         <h4>{"Ціна: " + post.price + " $"}</h4>
