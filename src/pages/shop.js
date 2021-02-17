@@ -2,7 +2,7 @@ import React from "react"
 import Item from "../components/Item"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import Sidebar from "../components/Sidebar"
+import Sidebar from "../components/Test"
 import { useSelector } from "react-redux"
 
 const MyShop = ({ data }) => {
