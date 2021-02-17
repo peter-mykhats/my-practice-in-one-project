@@ -1,12 +1,22 @@
 const initialState = {
   money: 3000,
-  mycomp: {
-    title: "Pentium 800",
-    sku: "skupentium",
+  mycomp: [
+    {
+      title: "Pentium 800",
+      sku: "skupentium",
+      price: 0,
+      parameters: 1,
+      image: "",
+      category: "Компютери",
+    },
+  ],
+  myphone: {
+    title: "Samsung   L-Bello",
+    sku: "skusams",
     price: 0,
     parameters: 1,
     image: "",
-    category: "Компютери",
+    category: "Телефони",
   },
   videos: [
     { name: "Mazda", rnd: 1, key: 1 },
