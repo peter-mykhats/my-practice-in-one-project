@@ -1,15 +1,15 @@
+import { BUY_ACCESSORIES, MONEY_SPENT } from "../types"
+
 const initialState = {
   money: 3000,
-  mycomp: [
-    {
-      title: "Pentium 800",
-      sku: "skupentium",
-      price: 0,
-      parameters: 1,
-      image: "",
-      category: "Компютери",
-    },
-  ],
+  mycomp: {
+    title: "Pentium 800",
+    sku: "skupentium",
+    price: 0,
+    parameters: 1,
+    image: "",
+    category: "Компютери",
+  },
   myphone: {
     title: "Samsung   L-Bello",
     sku: "skusams",
@@ -26,7 +26,6 @@ const initialState = {
   ],
 }
 
-const ADD_TO_CART = "ADD_TO_CART"
 // const DELETE_FROM_CART = "DELETE_FROM_CART"
 // const CHANGE_QUANTITY = "CHANGE_QUANTITY"
 // const CLEAR_CART = "CLEAR_CART"
@@ -35,9 +34,9 @@ const ADD_TO_CART = "ADD_TO_CART"
 //   return { type: CLEAR_CART }
 // }
 
-export const addBook = book => {
-  return { type: ADD_TO_CART, book }
-}
+// export const addBook = book => {
+//   return { type: BUY_ACCESSORIES, book }
+// }
 // export const deleteBook = sku => ({ type: DELETE_FROM_CART, sku })
 
 // export const changeQuantity = ({ sku, counter }) => {
@@ -49,13 +48,31 @@ export const addBook = book => {
 
 export default function accessoriesReducer(state = initialState, action) {
   switch (action.type) {
-    case ADD_TO_CART:
-      action.book.counter = 1
-      action.book.total = action.book.price
-      if (state.find(book => book.sku === action.book.sku)) {
-        return state
+    case BUY_ACCESSORIES:
+      return {
+        ...state,
+        mycomp: {
+          // id: action.payload,
+          title: action.title,
+          // img: action.img,
+          parameters: action.parameters,
+          price: action.price,
+        },
       }
-      return [...state, action.book]
+    case MONEY_SPENT:
+      return {
+        ...state,
+        money: state.money - action.moneySpent,
+      }
+    // -----
+    // action.book.counter = 1
+    // action.book.total = action.book.price
+    // if (state.find(book => book.sku === action.book.sku)) {
+    //   return state
+    // }
+    // return [...state, action.book]
+    // =====
+
     // case CHANGE_QUANTITY:
     //   return state.map(book => {
     //     if (book.sku !== action.sku) {

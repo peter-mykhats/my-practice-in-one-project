@@ -7,8 +7,8 @@ const MyComputer = () => {
   return (
     <div className={"my-computer-block"}>
       <div className={"my-computer-title"}>My computer: </div>
-      <div>{mycomps[0].title}</div>
-      <div>Параметри: {mycomps[0].parameters}</div>
+      <div>{mycomps.title}</div>
+      <div>Параметри: {mycomps.parameters}</div>
     </div>
   )
 }
