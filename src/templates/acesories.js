@@ -17,7 +17,7 @@ const Template = ({ data }) => {
 
   const bayHandler = () => {
     if (price > money) {
-      alert("No more money")
+      alert("У вас недостатньо грошей")
     } else {
       dispatch(Bay(productItem))
       dispatch(MoneySpent(productItem))
@@ -40,12 +40,14 @@ const Template = ({ data }) => {
         <div className={"acesories-image-box"}>
           {<img src={post.image} alt="imagere" />}
         </div>
-        <div
-          className={"acesories-buy"}
-          onClick={() => bayHandler(productItem)}
-        >
-          купити
-        </div>
+        <Link to="/shop/">
+          <div
+            className={"acesories-buy"}
+            onClick={() => bayHandler(productItem)}
+          >
+            купити
+          </div>
+        </Link>
         <hr />
         <Link to="/shop/">Go Back</Link>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

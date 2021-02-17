@@ -14,11 +14,11 @@ const Item = ({ productItem }) => {
 
   const bayHandler = () => {
     if (price > money) {
-      alert("No more money")
+      alert("У вас недостатньо грошей")
     } else {
       dispatch(Bay(productItem))
       dispatch(MoneySpent(productItem))
-      // dispatch(MoneyOff(props.comp))
+      alert("Куплено!")
     }
   }
 
@@ -42,7 +42,7 @@ const Item = ({ productItem }) => {
           <p>{money}</p>
           {/* <div>{productItem.frontmatter.parameters}</div> */}
 
-          <Link to="/">
+          <Link to="/shop">
             <div
               className={"comp-card__shopcart"}
               onClick={() => bayHandler(productItem)}
