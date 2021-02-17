@@ -1,11 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
 // import Star from "./Star"
+import { useDispatch, useSelector } from "react-redux"
+import { Bay, MoneySpent } from "../redux/actions/accessoriesAction"
 
 const Item = ({ productItem }) => {
   const price = productItem.frontmatter.price
   const nosale = (price / 100) * 120
   const sale = price - nosale
+
+  const dispatch = useDispatch()
+  const money = useSelector(state => state.acc.money)
+
+  const bayHandler = () => {
+    if (price > money) {
+      alert("У вас недостатньо грошей")
+    } else {
+      dispatch(Bay(productItem))
+      dispatch(MoneySpent(productItem))
+      alert("Куплено!")
+    }
+  }
+
   return (
     <Link to={`/shop/${productItem.frontmatter.path}`}>
       <div className={"comp-card"}>
@@ -23,10 +39,14 @@ const Item = ({ productItem }) => {
           <div className={"comp-card__price"}>
             {productItem.frontmatter.price + " $"}
           </div>
+          <p>{money}</p>
           {/* <div>{productItem.frontmatter.parameters}</div> */}
 
-          <Link to="/">
-            <div className={"comp-card__shopcart"}>
+          <Link to="/shop">
+            <div
+              className={"comp-card__shopcart"}
+              onClick={() => bayHandler(productItem)}
+            >
               {/* <img src="img/pngegg.png" alt="shopcart" /> */}
               купити
             </div>
