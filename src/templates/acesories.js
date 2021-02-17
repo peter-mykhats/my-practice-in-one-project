@@ -2,15 +2,29 @@ import React from "react"
 import Link from "gatsby-link"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-// import { useSelector } from "react-redux"
 import "../scss/main.scss"
+import { useDispatch, useSelector } from "react-redux"
+import { Bay, MoneySpent } from "../redux/actions/accessoriesAction"
 
 const Template = ({ data }) => {
   const post = data.markdownRemark.frontmatter
+  const productItem = data.markdownRemark
   console.log(JSON.stringify(data, null, 4))
+  const price = post.price
+  const money = useSelector(state => state.acc.money)
 
-  // const money = useSelector(state => state.category)
-  // console.log(money)
+  const dispatch = useDispatch()
+
+  const bayHandler = () => {
+    if (price > money) {
+      alert("No more money")
+    } else {
+      dispatch(Bay(productItem))
+      dispatch(MoneySpent(productItem))
+      // dispatch(MoneyOff(props.comp))
+      alert("Куплено")
+    }
+  }
 
   return (
     <Layout>
@@ -26,7 +40,12 @@ const Template = ({ data }) => {
         <div className={"acesories-image-box"}>
           {<img src={post.image} alt="imagere" />}
         </div>
-        <div className={"acesories-buy"}>купити</div>
+        <div
+          className={"acesories-buy"}
+          onClick={() => bayHandler(productItem)}
+        >
+          купити
+        </div>
         <hr />
         <Link to="/shop/">Go Back</Link>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
