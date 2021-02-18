@@ -18,9 +18,20 @@ const MyShop = ({ data }) => {
       setcurrentCategory(null)
     }
 
-    console.log("cat::", cat)
-    console.log("currentCategory::", currentCategory)
+    // console.log("cat::", cat)
+    // console.log("currentCategory::", currentCategory)
   }
+
+  const filteredBooks = data => {
+    return data.filter(
+      item => item.node.frontmatter.category === currentCategory
+    )
+  }
+
+  const filteredBookData = currentCategory
+    ? filteredBooks(allProducts)
+    : allProducts
+  console.log("filteredBookData:::", filteredBookData)
 
   return (
     <Layout>
@@ -39,7 +50,7 @@ const MyShop = ({ data }) => {
             )
           })}
           <div className={"myshop-items"}>
-            {allProducts.map(product => {
+            {filteredBookData.map(product => {
               return <Item key={product.node.id} productItem={product.node} />
             })}
           </div>
