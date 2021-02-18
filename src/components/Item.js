@@ -35,7 +35,7 @@ const Item = ({ productItem }) => {
         <div className={"comp-card__star"}>
           <Star value={productItem.frontmatter.parameters / 2} />
 
-          <h4>{productItem.frontmatter.parameters / 2}</h4>
+          <h4>{productItem.frontmatter.parameters / 2 + "/5"}</h4>
         </div>
         <div className={"comp-card-sale"}>
           <div className={"comp-card__price-nosale"}>{nosale + " $"}</div>
