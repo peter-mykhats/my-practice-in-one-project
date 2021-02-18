@@ -1,6 +1,6 @@
 .comp-card {
   width: 180px;
-  height: 200px;
+  height: 220px;
   // background-color: rgb(163, 163, 91);
   margin: 12px;
   // padding-bottom: 90px;
@@ -13,6 +13,12 @@
 .comp-card__title {
   // background-color: rgb(167, 160, 160);
   height: 54px;
+}
+.comp-card__star {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 5px;
 }
 .comp-card-bottom {
   display: flex;
@@ -53,7 +59,9 @@
   padding-left: 5px;
 }
 .comp-card__img {
-  height: 100%;
+  height: 180px;
+  width: 180px;
+  padding-bottom: 20px;
 }
 
 .comp-card__shopcart {

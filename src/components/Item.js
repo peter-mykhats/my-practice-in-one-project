@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 // import Star from "./Star"
 import { useDispatch, useSelector } from "react-redux"
 import { Bay, MoneySpent } from "../redux/actions/accessoriesAction"
+import Star from "./Star"
 
 const Item = ({ productItem }) => {
   const price = productItem.frontmatter.price
@@ -30,6 +31,11 @@ const Item = ({ productItem }) => {
         </div>
         <div className={"comp-card__title"}>
           {productItem.frontmatter.title}
+        </div>
+        <div className={"comp-card__star"}>
+          <Star value={productItem.frontmatter.parameters / 2} />
+
+          <h4>{productItem.frontmatter.parameters / 2}</h4>
         </div>
         <div className={"comp-card-sale"}>
           <div className={"comp-card__price-nosale"}>{nosale + " $"}</div>
