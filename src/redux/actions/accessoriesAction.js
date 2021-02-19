@@ -6,6 +6,7 @@ export const Bay = comp => ({
   title: comp.frontmatter.title,
   parameters: comp.frontmatter.parameters,
   price: comp.frontmatter.price,
+  category: comp.frontmatter.category,
   //   img: comp.img,
 })
 

@@ -2,11 +2,13 @@ import React from "react"
 import Layout from "../components/layout"
 import { useSelector } from "react-redux"
 import MyComputer from "../components/MyComputer"
+import MyPhone from "../components/MyPhone"
+import MyCamera from "../components/MyCamera"
 
 const MyOffice = () => {
   const mon = useSelector(state => state.acc.money)
   const mycomp = useSelector(state => state.acc.mycomp)
-  const myphone = useSelector(state => state.acc.myphone)
+  // const myphone = useSelector(state => state.acc.myphone)
   console.log("mycomp:::", mycomp)
   return (
     <Layout>
@@ -27,6 +29,8 @@ const MyOffice = () => {
       {mycomp.parameters}
       {mycomp.sku}  */}
       <MyComputer />
+      <MyPhone />
+      <MyCamera />
     </Layout>
   )
 }

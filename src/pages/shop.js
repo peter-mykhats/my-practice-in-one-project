@@ -7,7 +7,6 @@ import { useSelector } from "react-redux"
 
 const MyShop = ({ data }) => {
   const allProducts = data.allMarkdownRemark.edges
-
   const categFromState = useSelector(state => state.categories)
   const [currentCategory, setcurrentCategory] = useState(null)
 
@@ -17,21 +16,18 @@ const MyShop = ({ data }) => {
     } else {
       setcurrentCategory(null)
     }
-
-    // console.log("cat::", cat)
-    // console.log("currentCategory::", currentCategory)
   }
 
-  const filteredBooks = data => {
-    return data.filter(
+  const filteredProducts = myBookDataParam => {
+    return myBookDataParam.filter(
       item => item.node.frontmatter.category === currentCategory
     )
   }
 
   const filteredBookData = currentCategory
-    ? filteredBooks(allProducts)
+    ? filteredProducts(allProducts)
     : allProducts
-  console.log("filteredBookData:::", filteredBookData)
+  // console.log("filteredBookData:::", filteredBookData)
 
   return (
     <Layout>

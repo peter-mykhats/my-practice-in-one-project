@@ -4,6 +4,6 @@ sku: "sku-11112"
 price: "65"
 path: "lamp26"
 parameters: "2"
-category: Аксесуари
+category: Освітлення
 image: "/img/lamp-26.jpg"
 ---

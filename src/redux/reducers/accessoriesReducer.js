@@ -18,6 +18,14 @@ const initialState = {
     image: "",
     category: "Телефони",
   },
+  mycamera: {
+    title: "Встроєна камера на телефоні Samsung   L-Bello",
+    sku: "skucamsams",
+    price: 0,
+    parameters: 1,
+    image: "",
+    category: "Камери",
+  },
   videos: [
     { name: "Mazda", rnd: 1, key: 1 },
     { name: "Audi", rnd: 2, key: 2 },
@@ -26,29 +34,47 @@ const initialState = {
   ],
 }
 
-// const DELETE_FROM_CART = "DELETE_FROM_CART"
-// const CHANGE_QUANTITY = "CHANGE_QUANTITY"
-// const CLEAR_CART = "CLEAR_CART"
-
-// export const clearCart = () => {
-//   return { type: CLEAR_CART }
-// }
-
-// export const addBook = book => {
-//   return { type: BUY_ACCESSORIES, book }
-// }
-// export const deleteBook = sku => ({ type: DELETE_FROM_CART, sku })
-
-// export const changeQuantity = ({ sku, counter }) => {
-//   if (counter < 1) {
-//     return { type: DELETE_FROM_CART, sku }
-//   }
-//   return { type: CHANGE_QUANTITY, sku, counter }
-// }
-
 export default function accessoriesReducer(state = initialState, action) {
   switch (action.type) {
     case BUY_ACCESSORIES:
+      if (action.category === "Телефони") {
+        return {
+          ...state,
+          myphone: {
+            // id: action.payload,
+            title: action.title,
+            // img: action.img,
+            parameters: action.parameters,
+            price: action.price,
+          },
+        }
+      }
+
+      if (action.category === "Компютери") {
+        return {
+          ...state,
+          mycomp: {
+            // id: action.payload,
+            title: action.title,
+            // img: action.img,
+            parameters: action.parameters,
+            price: action.price,
+          },
+        }
+      }
+      if (action.category === "Камери") {
+        return {
+          ...state,
+          mycamera: {
+            // id: action.payload,
+            title: action.title,
+            // img: action.img,
+            parameters: action.parameters,
+            price: action.price,
+          },
+        }
+      }
+
       return {
         ...state,
         mycomp: {
@@ -59,6 +85,7 @@ export default function accessoriesReducer(state = initialState, action) {
           price: action.price,
         },
       }
+
     case MONEY_SPENT:
       return {
         ...state,
