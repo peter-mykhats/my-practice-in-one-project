@@ -1,0 +1,380 @@
+// -------------------------
+// Variables
+// -------------------------
+$red: #c2000e;
+$green: #008025;
+$gray: #d1d1d1;
+$light_gray: #e7e7e7;
+$text: #333333;
+
+// -------------------------
+// Begin styles
+// -------------------------
+// html {
+// 	background-color: white;
+// 	min-height: 100%;
+// 	font-family: 'Roboto', sans-serif;
+// }
+
+// body {
+// 	max-width: 600px;
+// 	margin: 0 auto;
+// 	background-color: transparent;
+// }
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  color: $red;
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.description {
+  text-align: center;
+  color: lighten($text, 20);
+  margin-bottom: 30px;
+}
+
+.help {
+  float: right;
+  color: $red;
+  transition: all 300ms linear;
+  &:hover {
+    color: darken($red, 10);
+  }
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px 20px;
+  border: 1px solid $gray;
+  border-radius: 0px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  &:focus {
+    border-color: $green;
+  }
+}
+
+input[type="radio"] {
+  display: none;
+
+  + .label-text {
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    cursor: pointer;
+  }
+
+  + .label-text:before {
+    content: "\f10c";
+    font-family: "FontAwesome";
+    width: 1em;
+    display: inline-block;
+    color: $text;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  &:checked + .label-text:before {
+    content: "\f192";
+    color: $green;
+    animation: itemScale 200ms linear;
+  }
+
+  &:disabled + .label-text {
+    color: lighten($text, 40);
+    cursor: not-allowed;
+
+    &:before {
+      content: "\f111";
+      color: lighten($text, 40);
+    }
+  }
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  color: $text;
+  padding: 0 !important;
+  cursor: default !important;
+}
+
+.radio {
+  border-top: 1px solid $gray;
+  &:last-child {
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.button {
+  margin: 20px 0 0 0;
+  padding: 10px 20px;
+  border-radius: 0px;
+  background: $red;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    background: darken($red, 10%);
+  }
+}
+
+.alert {
+  border-radius: 0px;
+}
+
+.alert-danger {
+  color: $red;
+  background-color: lighten($red, 60);
+  border-color: lighten($red, 55);
+  border-left: 3px solid $red;
+  .icon {
+    font-weight: bold;
+    &:before {
+      content: unquote('"\\f12a"');
+      font-family: "FontAwesome";
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+    }
+  }
+}
+
+code {
+  color: lighten($text, 20);
+  background-color: rgba($light_gray, 0.5);
+  border-radius: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.modal-wrap {
+  max-width: 600px;
+  margin: 50px auto;
+  transition: transform 300ms ease-in-out;
+}
+
+.modal-header {
+  height: 45px;
+  background: $light_gray;
+  border: 1px solid $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: all 300ms linear;
+    &.is-active {
+      background: rgba($green, 0.5);
+    }
+    &.is-valid {
+      background: $green;
+      &:before {
+        content: "\f00c";
+        font-family: "FontAwesome";
+        color: white;
+        display: block;
+        position: relative;
+        animation: itemScale 200ms linear;
+      }
+    }
+    &.is-invalid {
+      background: $red;
+      &:before {
+        content: "\f00d";
+        font-family: "FontAwesome";
+        color: white;
+        display: block;
+        position: relative;
+        animation: itemScale 200ms linear;
+      }
+    }
+  }
+}
+
+.modal-bodies {
+  position: relative;
+  perspective: 1000px;
+}
+
+.modal-body {
+  background: white;
+  border: 1px solid $green;
+  border-top: 0px;
+  padding: 40px 100px;
+  box-shadow: 0px 50px 30px -30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+  //   position: absolute;
+  top: 0;
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  transform-origin: top left;
+  &.is-showing {
+    display: block;
+  }
+}
+
+// -------------------------
+// JavaScript Classes
+// -------------------------
+.popover {
+  border-radius: 0px;
+  border-color: $green;
+  width: 100%;
+  > .arrow {
+    border-left-color: $green !important;
+  }
+}
+
+.popover-title {
+  border-radius: 0px;
+  border-color: $green;
+  background-color: $light_gray;
+}
+
+.popover-content {
+  border-radius: 0px;
+}
+
+.animate-out-to-left {
+  animation: out-left 600ms ease-in-out forwards;
+}
+
+.animate-out-to-right {
+  animation: out-right 600ms ease-in-out forwards;
+}
+
+.animate-in-from-left {
+  animation: in-left 500ms ease-in-out forwards;
+  display: block;
+}
+
+.animate-in-from-right {
+  animation: in-right 500ms ease-in-out forwards;
+  display: block;
+}
+
+.animate-up {
+  transform: translateY(-100vh) rotate(30deg);
+}
+
+.input-error {
+  border-color: $red !important;
+}
+
+.shake {
+  animation: shake 500ms linear forwards;
+}
+
+// -------------------------
+// Keyframes
+// -------------------------
+@keyframes out-left {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes out-right {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes in-left {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes in-right {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  10% {
+    transform: translateX(-10px);
+  }
+  20% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(10px);
+  }
+  40% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(0px);
+  }
+  70% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(0px);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes itemScale {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
